@@ -1,7 +1,7 @@
 const circle = document.getElementById('circle');
 let offsetX = 0;
 let offsetY = 0;
-const sensitivity = 15;
+const sensitivity = 10;
 const button = document.querySelector('button');
 const audio = new Audio();
 audio.src = "./sound.wav";
