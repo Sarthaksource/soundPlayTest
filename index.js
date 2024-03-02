@@ -4,7 +4,7 @@ const button = document.querySelector('button');
 const audio = new Audio();
 audio.src = "./sound.wav";
 
-window.addEventListener('deviceorientation', handleOrientation);
+// window.addEventListener('deviceorientation', handleOrientation);
 window.addEventListener('devicemotion', handleMotion);
 
 function isColliding(element1, element2) {
