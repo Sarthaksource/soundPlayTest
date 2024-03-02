@@ -1,6 +1,7 @@
 const circle = document.getElementById('circle');
 let offsetX = 0;
 let offsetY = 0;
+const sensitivity = 1.5;
 const button = document.querySelector('button');
 const audio = new Audio();
 audio.src = "./sound.wav";
@@ -37,8 +38,8 @@ function handleMotion(event) {
   const accelerationY = event.accelerationIncludingGravity.y;
 
   // Adjust circle position based on acceleration with higher sensitivity
-  offsetX -= accelerationX * 0.5; // Further increase the scale factor for higher sensitivity
-  offsetY += accelerationY * 0.5;
+  offsetX += accelerationX * sensitivity; // Further increase the scale factor for higher sensitivity
+  offsetY += accelerationY * sensitivity;
 
   // Limit the movement to the window bounds
   offsetX = Math.min(window.innerWidth - 50, Math.max(0, offsetX));
